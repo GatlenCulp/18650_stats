@@ -8,8 +8,13 @@
 )
 
 #let gatbox = gatbox.with(color-cycle: true)
-#set page(columns: 2)
-#set text(size: 12pt)
+#let large-mode = false
+
+#if large-mode {
+  set page(columns: 2)
+  set text(size: 12pt)
+}
+
 
 = Cheatsheet
 
@@ -110,7 +115,7 @@
 
 - *Exponential distribution*
   $
-       X & ~ Exp(beta) \
+       X & ~ "Exp"(beta) \
     f(x) & := 1/beta e^(-x / beta), quad forall x > 0
   $
   - $beta$ is the mean
